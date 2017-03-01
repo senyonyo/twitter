@@ -1,0 +1,2 @@
+MAILTO=""
+0 */5 * * * /usr/bin/python /home/rh/wts/twitter/twitter_countdown.py
