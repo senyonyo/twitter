@@ -1,11 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import twitter
-import json
+import tweepy
+import secret
 
-CK= twkey['ck']
-CS= twkey['cs']
-AK= twkey['ak']
-ATS= twkey['ats']
+CK= secret.twkey['ck']
+CS= secret.twkey['cs']
+ATK= secret.twkey['atk']
+ATS= secret.twkey['ats']
 
+auth = tweepy.OAuthHandler(CK, CS)
+auth.set_access_token(ATK, ATS)
+
+api = tweepy.API(auth)
+
+api.update_status("bot テスト")
