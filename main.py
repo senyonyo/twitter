@@ -26,9 +26,12 @@ def search_rest(api,keyword,search_count=10):
     print twt.text +"\n"
     
     with open('tweet.txt','a') as f:
-      f.write("%3" % (i+1))
-      f.write(str(twt.created_at).encode('utf-8'))
-      f.write(twt.user.name.encode('utf-8'))
-      f.write((twt.text+"\n").encode('utf-8'))
+      f.write("---"+str(i+1) +"---\n")
+      f.write(str(twt.created_at).encode('utf-8')+"\n")
+      f.write(twt.user.name.encode('utf-8')+"\n")
+      f.write(twt.text.encode('utf-8')+"\n")
+      f.write("rt:"+str(twt.retweet_count).encode('utf-8')+"\n")
+      f.write("fav:"+str(twt.favorite_count).encode('utf-8')+"\n")
+      f.write("\n")
 
 search_rest(api,keyword,30)
