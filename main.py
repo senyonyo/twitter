@@ -20,10 +20,10 @@ keyword = "lang:ja min_retweets:50"
 def search_rest(api,keyword,search_count=10):
   search_result = api.search(keyword,count=search_count)
   for i,twt in enumerate(search_result):
-    print"---%3d---" % (i + 1)
-    print twt.created_at
-    print twt.user.name
-    print twt.text +"\n"
+    #print"---%3d---" % (i + 1)
+    #print twt.created_at
+    #print twt.user.name
+    #print twt.text +"\n"
     
     with open('tweet.txt','a') as f:
       f.write("---"+str(i+1) +"---\n")
