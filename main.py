@@ -4,6 +4,7 @@
 import tweepy
 import secret
 import codecs
+import MySQLLdb
 
 CK= secret.twkey['ck']
 CS= secret.twkey['cs']
