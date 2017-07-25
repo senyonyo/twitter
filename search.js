@@ -1,16 +1,17 @@
 var fs = require('fs');
-fs.readdir('.', function(err, files){
-    if (err) throw err;
-    var fileList = [];
-    files.filter(function(file){
-        data = fs.statSync(file).isFile() && /.*\.json$/.test(file);
-    }).forEach(function (file) {
-        fileList.push(file);
-    });
-		fs.writeFile('filename.json', JSON.stringify(data, null, '    '));
+fs.readFile('./outputs.lst', 'utf8', function (err, text) {
+	var rl = readline.createInterface(rs, {});    
+  rl.on('line', function(line) {
+		fs.readFile(line, 'utf8', function (err, text) {
+			fs.readFile('./enjou.json', 'utf8', function (err, text) {
+				while(){	
+					if(    ){
+							json.statuses[3].value
+						}
+				}
+			}
+	});
 });
-
-/*var json = JSON.parse(fs.readFileSync('./outputs1/', 'utf8'));
 console.log(json.marker[0].name);
 
 if(){
@@ -18,4 +19,4 @@ if(){
 
 
 }
-*/
+
